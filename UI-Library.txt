@@ -206,10 +206,9 @@ gethiddenstuff.MakeCustomTopBar = function()
         end)
     end
 end]]
-gg = loadstring(game:HttpGet("https://raw.githubusercontent.com/DINERO9/Array/refs/heads/main/Protected_9252082829980855.txt"))()
-print(gg)
-gethiddenstuff.MakeCustomOutline()
-gethiddenstuff.MakeCustomTopBar()
+gg = loadstring(game:HttpGet("https://raw.githubusercontent.com/DINERO9/Array/refs/heads/main/TeTraX-Ui.lua"))()
+gethiddenstuff.MakeCustomOutline(getgenv().Main)
+gethiddenstuff.MakeCustomTopBar(getgenv().Main)
 
 --Variables
 local request = (syn and syn.request) or (http and http.request) or http_request
