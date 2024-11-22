@@ -153,7 +153,7 @@ local InfoPrompt = ArrayField.Info
 
 ArrayField.DisplayOrder = 100
 LoadingFrame.Version.Text = Release
-
+getgenv().Main = Main
 
 --[[gethiddenstuff = {}
 
