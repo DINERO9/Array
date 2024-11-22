@@ -1,5 +1,6 @@
-gethiddenstuff = {}
 
+local RunService = game:GetService("RunService")
+gethiddenstuff = {}
 gethiddenstuff.MakeCustomOutline = function(Main)
     local rainbowColor = Instance.new("UIStroke",Main)
     rainbowColor.Thickness = 1.5
