@@ -1,5 +1,5 @@
 getgenv().HiddenProject = "98218382"
-function LoadLibrary()
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DINERO9/Array/refs/heads/main/uisetr.txt"))() --MINE
 
 local a a = {
@@ -14432,4 +14432,3 @@ end
 return b end end
 local b = a.load's'
 return b
-end
