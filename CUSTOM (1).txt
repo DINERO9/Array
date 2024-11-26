@@ -1,0 +1,72 @@
+function SkiidoLooking()
+local RR = {}
+if getgenv().HiddenProject == "1234"
+and getgenv().HiddenProject ~= nil then
+    RunService = game:GetService("RunService")
+    RR.AddColor = function(k,i,j)
+        local glowggrad = Instance.new("UIGradient",k)
+        glowggrad.Color=ColorSequence.new({
+            ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)),
+            ColorSequenceKeypoint.new(0.1, Color3.fromRGB(255, 30, 30)),
+            ColorSequenceKeypoint.new(0.2, Color3.fromRGB(255, 100, 0)),  
+            ColorSequenceKeypoint.new(0.3, Color3.fromRGB(255, 180, 0)), 
+            ColorSequenceKeypoint.new(0.4, Color3.fromRGB(0, 255, 50)),     
+            ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 255, 255)), 
+            ColorSequenceKeypoint.new(0.6, Color3.fromRGB(0, 160, 255)), 
+            ColorSequenceKeypoint.new(0.7, Color3.fromRGB(0, 95, 255)),  
+            ColorSequenceKeypoint.new(0.8, Color3.fromRGB(255, 0, 255)), 
+            ColorSequenceKeypoint.new(0.9, Color3.fromRGB(255, 50, 255)),   
+            ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 0, 180))   
+        })
+        local xx=k and k.UIGradient or nil
+        RunService.RenderStepped:Connect(function(C)
+            if i.UIElements.Main and j and j.Parent~=nil then
+                if xx then
+                    xx.Rotation=(xx.Rotation+1)%360
+                end
+            end
+        end)
+    end
+    RR.AddOther = function(i,j,k)
+        print("addOther")
+        local Glower = Instance.new("ImageLabel")
+        Image="rbxassetid://93831937596979"
+        ScaleType="Slice"
+        SliceCenter=Rect.new(375,375,375,375)
+        BackgroundTransparency=0
+        AutoLocalize = true
+        ZIndex = 100
+        AutomaticSize = "XY"
+        SizeConstraint = "RelativeXY"
+        Position=UDim2.new(0.5,0,0.5,0)
+        AnchorPoint=Vector2.new(0.5,0.5)
+        ImageTransparency=.2
+        Parent = i.UIElements.Main
+        local clrner = Instance.new("UICorner",Glower)
+        clrner.CornerRadius=UDim.new(0,i.UICorner)
+        local glowergraf = Instance.new("UIGradient",clrner)
+        glowergraf.Color = ColorSequence.new({
+            ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)),
+            ColorSequenceKeypoint.new(0.1, Color3.fromRGB(255, 30, 30)),
+            ColorSequenceKeypoint.new(0.2, Color3.fromRGB(255, 100, 0)),  
+            ColorSequenceKeypoint.new(0.3, Color3.fromRGB(255, 180, 0)), 
+            ColorSequenceKeypoint.new(0.4, Color3.fromRGB(0, 255, 50)),     
+            ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 255, 255)), 
+            ColorSequenceKeypoint.new(0.6, Color3.fromRGB(0, 160, 255)), 
+            ColorSequenceKeypoint.new(0.7, Color3.fromRGB(0, 95, 255)),  
+            ColorSequenceKeypoint.new(0.8, Color3.fromRGB(255, 0, 255)), 
+            ColorSequenceKeypoint.new(0.9, Color3.fromRGB(255, 50, 255)),   
+            ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 0, 180))
+        })
+        local xx=k and k.UIGradient or nil
+        RunService.RenderStepped:Connect(function(C)
+            if i.UIElements.Main and j and j.Parent~=nil then
+                if Glower and Glower.UICorner.UIGradient then
+                    Glower.UICorner.UIGradient.Rotation=(Glower.UICorner.UIGradient.Rotation+1)%360
+                end
+            end
+        end)
+    end
+end
+    return RR
+end
