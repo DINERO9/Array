@@ -13102,7 +13102,7 @@ y = e("TextButton", {
         Transparency = 0,
     }, {
         e("UIGradient", {
-            Color = ColorSequence.new(Color3.fromHex"40c9ff",Color3.fromHex"e81cff")
+            Color = ColorSequence.new(selectedcolor())--ColorSequence.new(Color3.fromHex"40c9ff",Color3.fromHex"e81cff")
         })
     }),
     e("ImageLabel", {
@@ -13158,17 +13158,19 @@ A = e("ImageLabel", {
     Parent = x,
 }, {
     e("UIGradient", {
-        Color = ColorSequence.new(Color3.fromHex"40c9ff",Color3.fromHex"e81cff")
+        Color = ColorSequence.new(selectedcolor())
     })
 })
 
 c.RenderStepped:Connect(function(C)
     if i.UIElements.Main and x and x.Parent ~= nil then
     if B then
+    B.Color = ColorSequence.new(selectedcolor())
     B.Rotation = (B.Rotation+1)%360
     end
     if A and A.Parent ~= nil and A.UIGradient then
-    A.UIGradient.Rotation = (A.UIGradient.Rotation+1)%360
+        A.UIGradient.Color = ColorSequence.new(selectedcolor())
+        A.UIGradient.Rotation = (A.UIGradient.Rotation+1)%360
     end
     end
     end)
