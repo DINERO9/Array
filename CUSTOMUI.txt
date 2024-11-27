@@ -1,4 +1,4 @@
-function LoaD()
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DINERO9/Array/refs/heads/main/uisetr.txt"))() --MINE
 local a a = {
     cache = {}, load = function(b)if not a.cache[b]then a.cache[b] = {
