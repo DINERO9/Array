@@ -29,7 +29,7 @@ local a a = {
         Name = "Emerald",
         Accent = "#093502",
         Outline = "#034309",
-        Text = "#FFFFFFFF",
+        Text = "#FFFFFF",
         PlaceholderText = "#6B7280",
     },
     Sky = {
