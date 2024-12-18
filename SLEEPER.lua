@@ -12819,7 +12819,7 @@ local j = e("UICorner", {
     CornerRadius = UDim.new(0,i.UICorner)--i.UICorner
 })
 local k = e("UIStroke", {
-    Thickness = 1.8
+    Thickness = 1.8,
     Color = Color3.new(1,1,1),
     Transparency = 0,
 })
